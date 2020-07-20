@@ -7,8 +7,12 @@ body, html{
     font-family:"Lato", sans-serif;
     font-weight:400;
     line-height:1.8em;
-    color:#666;
+    color:#464a4e;
     
+  }
+  #home{
+    width: 100%;
+    height: 110%;
   }
   .introd{
     margin-left: 100px;
@@ -29,8 +33,12 @@ body, html{
   }
   
   .pimg1{
-    background-image:url('../image/background.jpg');
+    background-image:url('../image/bg.jpg');
+    height: 100%;
     min-height:100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   }
   .ptext{
     position:absolute;
@@ -55,19 +63,10 @@ body, html{
   
   @media(max-width:568px){
     .pimg1{
-      background-attachment:scroll;
+      background-attachment: local;
     }
   }
-  body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: "Roboto",sans-serif;
-    overflow-x: hidden;
-    
-}
-.sidebar{
+  .sidebar{
     background: black;
     margin-top: 0;
     padding-top: 30px;
@@ -96,146 +95,34 @@ body, html{
 }
 
 .sidebar a:hover{
-    background:rgb(238, 139, 139);
+    background:rgb(70, 2, 2);
     text-decoration: none;
 }
 .sidebar i{
     padding-right: 10px;
-   
 }
-#about{
-    padding-left: 185px;
-    padding-right: 10px;
-    height: 100%;
-    width: 100%; 
-    background-color: rgb(54, 50, 50);
+@media screen and (max-width: 810px){
+    .sidebar{
+      display: local;
+    }
 }
-.row {
-    display: flex;
-  }
-  
-  .column {
-    flex: 50%;
-    padding-top: 200px;
-  }
-  .wrapper{
-      width: 200px;
-      height: 200px;
-      margin: 15% auto;
-  }
-  .box-area{
-      animation: animate 10s ease-in-out infinite;
-      transform-style: preserve-3d;
-      transform-origin: 100px 100px 0;
-      height: 400px;
-      width: 400px;
-  }
-  .box-area:hover{
-    -webkit-animation-play-state:paused;
-    -moz-animation-play-state:paused;
-    -o-animation-play-state:paused;
-    animation-play-state:paused;
-    cursor: pointer;
-  }
-  
- .box-area div{
-     position: absolute;
-     width: 200px;
-     height: 200px;
-     line-height: 200px;
- }
-.box-area .box1{
-    background-image: url('../image/c++.png');
-    -webkit-background-size: cover;
-    background-color: rgb(66, 45, 45);
-    background-size: cover;
-    background-position: center;
-    transform: translateZ(100px);
+@media screen and (max-width: 1000px){
+    .sidebar{
+      display: none;
+    }
 }
-
-.box-area .box2{
-    background-image: url('../image/css.png');
-    -webkit-background-size: cover;
-    background-color: rgb(66, 45, 45);
-    background-size: cover;
-    background-position: center center;
-    transform: rotateY(90deg) translateZ(100px);
-}
-.box-area .box3{
-    background-image: url('../image/html.png');
-    -webkit-background-size: cover;
-    background-color: rgb(66, 45, 45);
-    background-size: cover;
-    background-position: center center;
-    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-}
-.box-area .box4{
-    background-image: url('../image/js.png');
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-color: rgb(66, 45, 45);
-    background-position: center center;
-    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-}
-.box-area .box5{
-    background-image: url('../image/ml.png');
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-color: rgb(66, 45, 45);
-    background-position: center center;
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-}
-.box-area .box6{
-    background-image: url('../image/py.png');
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-color: rgb(66, 45, 45);
-    background-position: center center;
-    transform: rotatex(-90deg) translateZ(100px);
-}
-
-@keyframes animate{
-    from,to{
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-   }
-   16%{
-       transform: rotateY(-90deg);
-
-   }
-   33%{
-       transform: rotateY(-90deg) rotateZ(90deg);
-   }
-   50%{
-    transform: rotateY(-180deg) rotateZ(90deg);
-}
-66%{
-    transform: rotateY(-270deg) rotatez(90deg);
-}
-83%{
-    transform: rotateX(90deg) rotateZ(90deg);
-}
-}
-.para{
-    color: white;
-    margin-top: 50px;
-}
-.head{
-    color: white;
-    margin-top: 0px;
-}
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+/* about */
 *{
   font-family:roboto;
 }
-body{
+/* body{
   background:#212121;
   color:#fff;
-}
+} */
 .out{
   position:relative;
-  margin-top: 100px;
-  margin-left:100px
+  margin-top: 160px;
+  margin-left:150px
 }
 h1{
   font-size:45px;
@@ -282,11 +169,12 @@ h1{
   }
 }
 #skills{
-    padding-left: 105px;
+    padding-left: 90px;
     padding-right: 10px;
-    height: 100%;
+    margin-top: -110px;
+    height: 115%;
     width: 100%; 
-    background-color: rgb(54, 50, 50);
+    background-color: #464a4e;
 }	
 .ro {
     display: flex;
@@ -296,6 +184,12 @@ h1{
   .col {
     flex: 50%;
     padding-top: 200px;
+    padding-left: 0px;
+  }
+  .col1{
+    flex: 50%;
+    padding-top: 125px;
+    padding-left: 10px;
   }
 
   *,
@@ -308,7 +202,7 @@ h1{
 
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  background: #292a2b;
+  background: #464a4e;
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
@@ -316,13 +210,272 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
-  background: #F45B69;
+  background: #353131;
+  padding: 40px 0;
+  width: 100%;
+  
+}
+
+.contain {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .col1 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #skills{
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 100%;
+    width: 100%; 
+    background-color: #464a4e;
+}	
+}
+@media screen and (max-width: 850px)
+{
+  .out{
+    width: 100%;
+    margin-left: 6px;
+    margin-top: 120px;
+    margin-right: 10px;
+    padding-left: 20px;
+  }
+  h1{
+    font-size: 1.5rem;
+  }
+}
+/* skills */
+#about{
+  padding-left: 185px;
+  padding-top: 0px;
+  padding-right: 10px;
+  height: 105%;
+  width: 100%; 
+  background-color: #464a4e;
+}
+.para{
+ margin-top: 50px; 
+}
+.row1 {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding-top: 60px;
+
+}
+.column1{
+  flex: 50%;
+  padding-top: 100px;
+}
+.head1{
+  margin-top: 0px;
+  margin-left: -300px;
+}
+.wrapper{
+    width: 350px;
+    height: 200px;
+    margin: 25% auto;
+    
+}
+.box-area{
+    animation: animate 10s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+    height: 400px;
+    width: 400px;
+}
+.box-area:hover{
+  -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused;
+  animation-play-state:paused;
+  cursor: pointer;
+}
+
+.box-area div{
+   position: absolute;
+   width: 200px;
+   height: 200px;
+   line-height: 200px;
+}
+.box-area .box1{
+  background-image: url('../image/c++.png');
+  -webkit-background-size: cover;
+  background-color: rgb(66, 45, 45);
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(100px);
+}
+
+.box-area .box2{
+  background-image: url('../image/css.png');
+  -webkit-background-size: cover;
+  background-color: rgb(66, 45, 45);
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.box-area .box3{
+  background-image: url('../image/html.png');
+  -webkit-background-size: cover;
+  background-color: rgb(66, 45, 45);
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+.box-area .box4{
+  background-image: url('../image/js.png');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: rgb(66, 45, 45);
+  background-position: center center;
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+.box-area .box5{
+  background-image: url('../image/ml.png');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: rgb(66, 45, 45);
+  background-position: center center;
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+.box-area .box6{
+  background-image: url('../image/py.png');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: rgb(66, 45, 45);
+  background-position: center center;
+  transform: rotatex(-90deg) translateZ(100px);
+}
+
+@keyframes animate{
+  from,to{
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+ }
+ 16%{
+     transform: rotateY(-90deg);
+
+ }
+ 33%{
+     transform: rotateY(-90deg) rotateZ(90deg);
+ }
+ 50%{
+  transform: rotateY(-180deg) rotateZ(90deg);
+}
+66%{
+  transform: rotateY(-270deg) rotatez(90deg);
+}
+83%{
+  transform: rotateX(90deg) rotateZ(90deg);
+}
+}
+.para1{
+  color: white;
+  margin-top: 50px;
+  margin-left: -306px;
+}
+.head{
+  color: white;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 100px
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+font-family:roboto;
+}
+body{
+background: #464a4e;
+color:#fff;
+}
+/* .out{
+position:relative;
+margin-top: 250px;
+margin-left:100px
+} */
+h1{
+font-size:45px;
+}
+@media screen and (max-width: 1200px){
+  #skills{
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1200px){
+.wrapper{
+  margin-top: 38px;
+  margin-left: -180px;
+}
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 40%;
+    margin-left: 10px;
+    margin-top: -150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 60%;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+.row {
+  
+  max-width: 114rem;
+    
+    width: 321px
+
+}
+}
+@media screen and (max-width: 1000px) {
+#about{
+  padding-left: 20px;
+  padding-right: 10px;
+  height: 100%;
+  width: 100%; 
+  background-color: #464a4e;
+}	
+}
+@media screen and (max-width: 1000px) {
+  .para1{
+    margin-top: 50px;
+    padding-right: 100px;
+  }
+}
+/* QUALIFICATION */
+
+
+.intro {
+  background: #464a4e;
   padding: 40px 0;
   width: 100%;
   
 }
 .edu{
   text-align: left;
+  margin-left: 20px;
   font-size: 30px;
 }
 
@@ -471,9 +624,11 @@ h1 {
   }
 }
 .h{
+  
   color: white;
 }
-/* project */
+
+/*  Project  */
 
 .u-center-text {
   text-align: center !important;
@@ -496,7 +651,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #fff;
-  background: #000;
+  background: #464a4e;
 }
 
 .heading-primary {
@@ -536,17 +691,29 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  margin-left: 200px;
+  margin-left: 240px;
   text-align: left;
   font-weight: 700;
-  color: transparent;
   letter-spacing: 0.2rem;
   line-height: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   color: #eee;
 }
-
+@media screen and (max-width: 900px){
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-left: 100px;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #eee;
+}
+}
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -620,10 +787,10 @@ body {
 }
 
 .section-plans {
-  background-color: #000;
+  background-color: #464a4e;
   padding: 4rem 0 4rem 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
 }
 
 .card {
@@ -631,6 +798,7 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
+  margin-left: 10px;
   margin-top: 100px;
   height: 52rem;
 }
@@ -789,7 +957,8 @@ body {
 
 .row {
   max-width: 114rem;
-  margin: 0 auto;
+  margin-left: 300px;
+  /* margin: 0 auto; */
 }
 
 .row:not(:last-child) {
@@ -813,19 +982,21 @@ body {
 
 .row .col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
-}
-
-/* contact us */
-body {
-  margin: 0;
-  padding: 0;
   
 }
 
+
+@media screen and (max-width: 1000px)
+{
+  .row .col-1-of-3 {
+    margin-left: 10px;
+    width: 75%;
+  }
+}
 #contact {
   width: 100%;
   height: 100vh;
-  background-color: #111;
+  background-color: #464a4e;
   overflow: hidden;
   padding-bottom: 200px;
 }
@@ -859,7 +1030,7 @@ body {
 
 .form-control, textarea {
   max-width: 400px;
-  background-color: #111;
+  background-color: rgb(252, 249, 249);
   color: #fff;
   letter-spacing: 1px;
 }
@@ -911,7 +1082,7 @@ body {
 .contact-text {
   font: 300 18px 'Lato', sans-serif;
   letter-spacing: 1.9px;
-  color: #bbb;
+  color: white;
 }
 
 .place {
@@ -927,13 +1098,13 @@ body {
 }
 
 .contact-text a {
-  color: #bbb;
+  color: white;
   text-decoration: none;
   transition-duration: 0.2s;
 }
 
 .contact-text a:hover {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -1083,4 +1254,28 @@ hr {
 }
 textarea.form-control {
   height: 170px;
+}
+@media screen and (max-width: 410px){
+.sidebar{
+  display: none;
+}
+}
+@media screen and (max-width: 600px) {
+  .col {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  div {
+    font-size: 30px;
+  }
+}
+.pro{
+  width: 120%;
+  height: 270px;
 }
